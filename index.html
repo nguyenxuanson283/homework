@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS only -->
+<link rel="stylesheet" href="./css/style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/cpexcel.min.js"></script>
+<script src="./js/main.js"></script>
+
+</head>
+
+<body>
+    <div class="container" ng-app="myApp" ng-controller="myController">
+        <h2 class="text-center mt-4 mb-4">Tra cứu thông tin tuyển sinh</h2>
+        <div class="logo">
+                <a href=""><img class="img" src="./images/logo.jpg"  alt=""></a>
+        </div>
+        <div class="action text-center mt-5">
+            <input type="file" id="excel_file">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Tra cứu thông tin học sinh..">
+        </div>
+       
+            <table class="table-striped table-bordered mt-5" cellpadding="0" cellspacing="0">
+                <tr>
+                    <th rowspan="2">STT</th>
+                    <th rowspan="2">Trường tiểu học</th>
+                    <th rowspan="2">Quận/huyện</th>
+                    <th rowspan="2">Mã học sinh</th>
+                    <th rowspan="2">Lớp</th>
+                    <th rowspan="2">Họ và tên</th>
+                    <th colspan="3" class="text-center">Ngày sinh</th>
+                    <th rowspan="2">Giới</th>
+                    <th rowspan="2">Nơi sinh</th>
+                    <th rowspan="2">Dân tộc</th>
+                    <th rowspan="2">Hộ khẩu thường trú</th>
+                    <th rowspan="2">Số điện thoại liên hệ</th>
+                    <th colspan="8" class="text-center">Điểm sơ tuyển vòng 1</th>
+                    <th rowspan="2">Ghi chú</th>
+                     
+            </tr>
+                <tr>
+                    <td class="bg-light">Ngày</td>
+                    <td class="bg-light">Tháng</td>
+                    <td class="bg-light">Năm</td>
+                    <td class="bg-light">Tổng điểm năm lớp 1</td>
+                    <td class="bg-light">Tổng điểm năm lớp 2</td>
+                    <td class="bg-light">Tổng điểm năm lớp 3</td>
+                    <td class="bg-light">Tổng điểm năm lớp 4</td>
+                    <td class="bg-light">Tổng điểm năm lớp 5</td>
+                    <td class="bg-light">Tổng điểm kết quả 5 năm</td>
+                    <td class="bg-light">Điểm ưu tiên</td>
+                    <td class="bg-light">Tổng điểm sơ tuyển</td>
+                  
+                </tr>
+                <tbody id="excel_data">
+                 
+                </tbody>
+            </table>
+        <footer class="text-center mt-5 bg-light p-5">
+            <h1>Nguyễn Xuân Sơn</h1>
+            <p>Upload file excel to html using JavaScript</p>
+        </footer>
+    </div>
+</body>
+</html>
